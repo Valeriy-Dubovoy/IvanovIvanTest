@@ -115,7 +115,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="0mx-7X-mJS">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="gearshape.fill" catalog="system" id="Bpq-O1-EbC"/>
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="gearshape.fill" catalog="system" id="Bpq-O1-EbC">
+                            <connections>
+                                <segue destination="Y0y-2C-B54" kind="showDetail" identifier="showBannersList" id="R6l-FK-QS4"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="JuV-gd-bAG"/>
                     </navigationItem>
                     <connections>
@@ -127,22 +131,47 @@
             </objects>
             <point key="canvasLocation" x="460.86956521739131" y="39.508928571428569"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Banners List View Controller-->
         <scene sceneID="Mpf-Db-cNX">
             <objects>
-                <tableViewController id="ilt-WB-ju2" sceneMemberID="viewController">
+                <tableViewController id="ilt-WB-ju2" customClass="BannersListViewController" customModule="IvanovIvanTest" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="X4c-Wj-pC4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="P9D-lQ-sjR">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="bannerCell" id="P9D-lQ-sjR" customClass="BannerListViewCell" customModule="IvanovIvanTest" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="P9D-lQ-sjR" id="zJF-lp-RZe">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WFj-SP-c1W">
+                                            <rect key="frame" x="20" y="9" width="50" height="25.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8cA-eM-Da2">
+                                            <rect key="frame" x="345" y="6.5" width="51" height="31"/>
+                                            <connections>
+                                                <action selector="activeSwitchDidChanged:" destination="P9D-lQ-sjR" eventType="valueChanged" id="ghU-0M-Lhc"/>
+                                            </connections>
+                                        </switch>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="WFj-SP-c1W" firstAttribute="centerY" secondItem="zJF-lp-RZe" secondAttribute="centerY" id="3Rb-m5-aSI"/>
+                                        <constraint firstItem="WFj-SP-c1W" firstAttribute="leading" secondItem="zJF-lp-RZe" secondAttribute="leading" constant="20" symbolic="YES" id="S3M-3Q-611"/>
+                                        <constraint firstItem="8cA-eM-Da2" firstAttribute="centerY" secondItem="zJF-lp-RZe" secondAttribute="centerY" id="XaA-Ps-mbI"/>
+                                        <constraint firstItem="8cA-eM-Da2" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="WFj-SP-c1W" secondAttribute="trailing" constant="8" symbolic="YES" id="pIo-6J-b4F"/>
+                                        <constraint firstAttribute="trailing" secondItem="8cA-eM-Da2" secondAttribute="trailing" constant="20" symbolic="YES" id="qZj-r8-TRp"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="actviveSwith" destination="8cA-eM-Da2" id="qCa-jg-gBT"/>
+                                    <outlet property="titleLabel" destination="WFj-SP-c1W" id="fCO-6b-Uvq"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

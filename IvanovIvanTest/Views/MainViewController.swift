@@ -77,6 +77,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UICollectionV
     }
     
     var banners: [Banner] = []
+    
     // MARK: - Articles DataSource
    var articles: [ArticleJSON]?
     
