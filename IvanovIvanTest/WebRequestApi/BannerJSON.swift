@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct BannerModel: Decodable {
+struct BannerJSON: Decodable {
     let name: String
     let color: String
     let active: Bool

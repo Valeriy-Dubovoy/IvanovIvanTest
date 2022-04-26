@@ -8,8 +8,8 @@
 import Foundation
 
 struct commonResponse : Decodable {
-    let banners:[ BannerModel ]?
-    let articles: [ ArticleModel ]?
+    let banners:[ BannerJSON ]?
+    let articles: [ ArticleJSON ]?
     
     enum CodingKeys: String, CodingKey {
         case banners = "banners"

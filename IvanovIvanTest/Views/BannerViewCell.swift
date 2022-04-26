@@ -11,8 +11,8 @@ class BannerViewCell: UICollectionViewCell {
     
     @IBOutlet weak var bannerTitleLabel: UILabel!
     
-    func configWith(banner: BannerModel) {
+    func configWith(banner: Banner) {
         self.bannerTitleLabel.text = banner.name
-        self.contentView.backgroundColor = UIColor(named: banner.color )
+       // self.contentView.backgroundColor = UIColor(named: banner?.color )
     }
 }

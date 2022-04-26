@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ArticleModel: Decodable {
+struct ArticleJSON: Decodable {
     let title: String
     let text: String
     
