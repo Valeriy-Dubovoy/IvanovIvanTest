@@ -70,7 +70,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UICollectionV
         let request = Banner.fetchRequest()
         
         do {
-            banners = try request.execute()
+            banners = try AppDelegate.viewContext.fetch(request) //request.execute()
         } catch {
             print("banners did not read from database")
         }

@@ -131,7 +131,7 @@
             </objects>
             <point key="canvasLocation" x="460.86956521739131" y="39.508928571428569"/>
         </scene>
-        <!--Banners List View Controller-->
+        <!--Настройки-->
         <scene sceneID="Mpf-Db-cNX">
             <objects>
                 <tableViewController id="ilt-WB-ju2" customClass="BannersListViewController" customModule="IvanovIvanTest" customModuleProvider="target" sceneMemberID="viewController">
@@ -179,7 +179,7 @@
                             <outlet property="delegate" destination="ilt-WB-ju2" id="NpQ-mA-jsB"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="gn5-su-5mA"/>
+                    <navigationItem key="navigationItem" title="Настройки" id="gn5-su-5mA"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NWb-Ql-Aga" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
