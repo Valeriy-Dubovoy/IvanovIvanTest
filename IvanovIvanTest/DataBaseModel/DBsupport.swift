@@ -114,6 +114,20 @@ class DBSupport {
         return fetchedResultsController
     }
     
+    // MARK: -Common functions
+    static func deleteObject( banner: Banner ) {
+        deleteObject(banner)
+    }
+    
+    static func deleteObject( article: Article ) {
+        deleteObject(article)
+    }
+    
+    static func deleteObject( _ dbObject: NSManagedObject ) {
+        AppDelegate.viewContext.delete(dbObject)
+        saveContext()
+    }
+    
     static func saveContext () {
         let context = AppDelegate.viewContext
         if context.hasChanges {

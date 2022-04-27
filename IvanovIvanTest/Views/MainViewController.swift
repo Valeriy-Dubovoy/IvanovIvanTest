@@ -36,8 +36,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UICollectionV
                 if let _ = responseData, error == nil {
                     if let data = responseData {
                         DBSupport.updateBanners(banners: data.response.banners)
-                        self.getBannersData()
-                        //self.banners = data.response.banners
+                        //self.getBannersData()
                         self.articles = data.response.articles
                     }
                 }
@@ -66,6 +65,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UICollectionV
         return DBSupport.shared.fetchedResultsController(entityName: "Banner", keyForSort: "name", predicate: predicate)
     }()
     
+    /*
     private func getBannersData() {
         let request = Banner.fetchRequest()
         
@@ -75,6 +75,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UICollectionV
             print("banners did not read from database")
         }
     }
+     */
     
     var banners: [Banner] = []
     
@@ -82,35 +83,48 @@ class MainViewController: UIViewController, UITableViewDataSource, UICollectionV
    var articles: [ArticleJSON]?
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 1
+        //return 2
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        switch section {
+        return "articles"
+        /*switch section {
         case 0:
             return "banners"
         case 1:
             return "articles"
         default:
             return "section \(section)"
-        }
+        }*/
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        switch section {
+        return articles?.count ?? 0
+        /*switch section {
         case 0:
             return banners.count
         case 1:
             return articles?.count ?? 0
         default:
             return 0
-        }
+        }*/
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
-        switch indexPath.section {
+        if let object = articles?[ indexPath.row ] {
+            var content = cell.defaultContentConfiguration()
+
+            // Configure content.
+            //content.image = UIImage(systemName: "star")
+            content.text = object.title
+            content.secondaryText = object.text
+
+            cell.contentConfiguration = content
+        }
+        /*switch indexPath.section {
         case 0:
             let object = banners[ indexPath.row ]
             var content = cell.defaultContentConfiguration()
@@ -134,7 +148,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UICollectionV
             }
         default:
             break
-        }
+        }*/
         
         return cell
     }
@@ -204,7 +218,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UICollectionV
 //        @unknown default:
 //            <#fatalError()#>
 //        }
-        getBannersData()
+        //getBannersData()
     }
     
     func controllerDidChangeContent(controller: NSFetchedResultsController<NSFetchRequestResult>) {
