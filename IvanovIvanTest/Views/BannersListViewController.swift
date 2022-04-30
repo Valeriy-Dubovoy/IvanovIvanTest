@@ -26,7 +26,10 @@ class BannersListViewController: UITableViewController, NSFetchedResultsControll
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-
+    @IBAction func doneAction(_ sender: UIBarButtonItem) {
+        dismiss(animated: true)
+    }
+    
     // MARK: - Table view data source
     
     lazy var bannersFRC: NSFetchedResultsController<NSFetchRequestResult> = {
@@ -142,14 +145,22 @@ class BannersListViewController: UITableViewController, NSFetchedResultsControll
         tableView.endUpdates()
     }
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "editBanner" {
+            if  let indexPath = tableView.indexPathForSelectedRow {
+                
+                let item = bannersFRC.object(at: indexPath) as! Banner
+                let nvc = segue.destination as! UINavigationController
+
+                let vc = nvc.topViewController as! BannerEditorViewController
+                vc.editableItem = item
+            }
+        }
     }
-    */
+    
 
 }

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		6861B21628180E7400F80E16 /* BannersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6861B21528180E7400F80E16 /* BannersListViewController.swift */; };
 		6861B218281812B200F80E16 /* BannerListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6861B217281812B200F80E16 /* BannerListViewCell.swift */; };
+		6861B21A281964F500F80E16 /* BannerEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6861B219281964F400F80E16 /* BannerEditorViewController.swift */; };
+		6861B21C281D050B00F80E16 /* DbExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6861B21B281D050B00F80E16 /* DbExtentions.swift */; };
 		686FE1B0280A9EBF006B2739 /* ApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686FE1AF280A9EBF006B2739 /* ApiResponse.swift */; };
 		686FE1B6280ADE20006B2739 /* WebAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686FE1B5280ADE20006B2739 /* WebAPI.swift */; };
 		686FE1B8280C276C006B2739 /* HttpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686FE1B7280C276C006B2739 /* HttpMethod.swift */; };
@@ -28,6 +30,8 @@
 /* Begin PBXFileReference section */
 		6861B21528180E7400F80E16 /* BannersListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannersListViewController.swift; sourceTree = "<group>"; };
 		6861B217281812B200F80E16 /* BannerListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerListViewCell.swift; sourceTree = "<group>"; };
+		6861B219281964F400F80E16 /* BannerEditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerEditorViewController.swift; sourceTree = "<group>"; };
+		6861B21B281D050B00F80E16 /* DbExtentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DbExtentions.swift; sourceTree = "<group>"; };
 		686FE1AF280A9EBF006B2739 /* ApiResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiResponse.swift; sourceTree = "<group>"; };
 		686FE1B5280ADE20006B2739 /* WebAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebAPI.swift; sourceTree = "<group>"; };
 		686FE1B7280C276C006B2739 /* HttpMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpMethod.swift; sourceTree = "<group>"; };
@@ -105,6 +109,7 @@
 			children = (
 				68C7D22E2800493E001292AC /* IvanovIvanTest.xcdatamodeld */,
 				686FE1C1280D8A08006B2739 /* DBsupport.swift */,
+				6861B21B281D050B00F80E16 /* DbExtentions.swift */,
 			);
 			path = DataBaseModel;
 			sourceTree = "<group>";
@@ -125,6 +130,7 @@
 				686FE1C328102E73006B2739 /* BannerViewCell.swift */,
 				6861B21528180E7400F80E16 /* BannersListViewController.swift */,
 				6861B217281812B200F80E16 /* BannerListViewCell.swift */,
+				6861B219281964F400F80E16 /* BannerEditorViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -202,6 +208,8 @@
 			files = (
 				68C7D2302800493E001292AC /* IvanovIvanTest.xcdatamodeld in Sources */,
 				68C7D22A2800493E001292AC /* MainViewController.swift in Sources */,
+				6861B21C281D050B00F80E16 /* DbExtentions.swift in Sources */,
+				6861B21A281964F500F80E16 /* BannerEditorViewController.swift in Sources */,
 				686FE1C428102E73006B2739 /* BannerViewCell.swift in Sources */,
 				68C7D24328004F33001292AC /* ArticleJSON.swift in Sources */,
 				686FE1C2280D8A08006B2739 /* DBsupport.swift in Sources */,
