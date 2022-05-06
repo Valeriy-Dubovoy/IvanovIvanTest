@@ -22,11 +22,11 @@
                                 <rect key="frame" x="20" y="283" width="374" height="579"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="Qcv-AJ-H9Y" detailTextLabel="cQP-BJ-zHL" style="IBUITableViewCellStyleSubtitle" id="YN2-IQ-gQd">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="Qcv-AJ-H9Y" detailTextLabel="cQP-BJ-zHL" style="IBUITableViewCellStyleSubtitle" id="YN2-IQ-gQd">
                                         <rect key="frame" x="0.0" y="44.5" width="374" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YN2-IQ-gQd" id="8nv-7r-kvz">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="344.5" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Qcv-AJ-H9Y">
@@ -130,6 +130,7 @@
                     <connections>
                         <outlet property="bannersCollectionView" destination="vmD-Z6-lh9" id="1R7-aK-y0l"/>
                         <outlet property="objectsTableView" destination="Ivo-YK-Fym" id="UIj-zH-mFI"/>
+                        <segue destination="7pe-uh-Lpz" kind="showDetail" identifier="showArticle" id="HZr-8W-VIB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -340,6 +341,64 @@
             </objects>
             <point key="canvasLocation" x="1539" y="40"/>
         </scene>
+        <!--Article View Controller-->
+        <scene sceneID="nf2-VC-E5E">
+            <objects>
+                <viewController id="w76-LT-ham" customClass="ArticleViewController" customModule="IvanovIvanTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="BbP-Nx-3bx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="articleImageCell" rowHeight="50" id="5Z2-6w-A9l" customClass="ArticleImageTableViewCell" customModule="IvanovIvanTest" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5Z2-6w-A9l" id="xku-fY-Jq4">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="articleCell" textLabel="fBp-XD-Ynl" detailTextLabel="DKa-U5-kUI" style="IBUITableViewCellStyleSubtitle" id="T6e-Kq-5WI" customClass="ArticleViewCell" customModule="IvanovIvanTest" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="94.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="T6e-Kq-5WI" id="jO4-Is-Cnc">
+                                    <rect key="frame" x="0.0" y="0.0" width="384.5" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fBp-XD-Ynl">
+                                            <rect key="frame" x="20" y="6" width="25" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DKa-U5-kUI">
+                                            <rect key="frame" x="20" y="22.5" width="40.5" height="13.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="qTJ-XF-HmS">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="cAf-2h-ms6">
+                            <connections>
+                                <action selector="closeButtonPressed:" destination="w76-LT-ham" id="AU7-Ib-Lb4"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="articlesTableView" destination="BbP-Nx-3bx" id="vg5-dk-6zr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n0b-fO-ZV1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2447.826086956522" y="712.5"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="fkS-g9-QDO">
             <objects>
@@ -358,9 +417,27 @@
             </objects>
             <point key="canvasLocation" x="1538" y="-639"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="BNf-ad-Sus">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7pe-uh-Lpz" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="VR3-zs-JHj">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="w76-LT-ham" kind="relationship" relationship="rootViewController" id="jBy-Cp-ioD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U0m-XD-iJM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1537.68115942029" y="712.5"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="2qE-9O-ZO7"/>
+        <segue reference="ZB4-L4-cL2"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="bannerImage" width="1024" height="1024"/>

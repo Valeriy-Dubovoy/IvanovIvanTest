@@ -11,12 +11,15 @@
 		6861B218281812B200F80E16 /* BannerListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6861B217281812B200F80E16 /* BannerListViewCell.swift */; };
 		6861B21A281964F500F80E16 /* BannerEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6861B219281964F400F80E16 /* BannerEditorViewController.swift */; };
 		6861B21C281D050B00F80E16 /* DbExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6861B21B281D050B00F80E16 /* DbExtentions.swift */; };
+		6861B21E281E734300F80E16 /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6861B21D281E734300F80E16 /* ArticleViewController.swift */; };
+		6861B220281E805100F80E16 /* ArticleViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6861B21F281E805100F80E16 /* ArticleViewCell.swift */; };
 		686FE1B0280A9EBF006B2739 /* ApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686FE1AF280A9EBF006B2739 /* ApiResponse.swift */; };
 		686FE1B6280ADE20006B2739 /* WebAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686FE1B5280ADE20006B2739 /* WebAPI.swift */; };
 		686FE1B8280C276C006B2739 /* HttpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686FE1B7280C276C006B2739 /* HttpMethod.swift */; };
 		686FE1BC280C27EF006B2739 /* BannerJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686FE1BB280C27EF006B2739 /* BannerJSON.swift */; };
 		686FE1C2280D8A08006B2739 /* DBsupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686FE1C1280D8A08006B2739 /* DBsupport.swift */; };
 		686FE1C428102E73006B2739 /* BannerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686FE1C328102E73006B2739 /* BannerViewCell.swift */; };
+		68787EC7281FFF9B00A634F3 /* ArticleImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68787EC6281FFF9B00A634F3 /* ArticleImageTableViewCell.swift */; };
 		68C7D2262800493E001292AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C7D2252800493E001292AC /* AppDelegate.swift */; };
 		68C7D2282800493E001292AC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C7D2272800493E001292AC /* SceneDelegate.swift */; };
 		68C7D22A2800493E001292AC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C7D2292800493E001292AC /* MainViewController.swift */; };
@@ -32,12 +35,15 @@
 		6861B217281812B200F80E16 /* BannerListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerListViewCell.swift; sourceTree = "<group>"; };
 		6861B219281964F400F80E16 /* BannerEditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerEditorViewController.swift; sourceTree = "<group>"; };
 		6861B21B281D050B00F80E16 /* DbExtentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DbExtentions.swift; sourceTree = "<group>"; };
+		6861B21D281E734300F80E16 /* ArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
+		6861B21F281E805100F80E16 /* ArticleViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewCell.swift; sourceTree = "<group>"; };
 		686FE1AF280A9EBF006B2739 /* ApiResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiResponse.swift; sourceTree = "<group>"; };
 		686FE1B5280ADE20006B2739 /* WebAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebAPI.swift; sourceTree = "<group>"; };
 		686FE1B7280C276C006B2739 /* HttpMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpMethod.swift; sourceTree = "<group>"; };
 		686FE1BB280C27EF006B2739 /* BannerJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerJSON.swift; sourceTree = "<group>"; };
 		686FE1C1280D8A08006B2739 /* DBsupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBsupport.swift; sourceTree = "<group>"; };
 		686FE1C328102E73006B2739 /* BannerViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerViewCell.swift; sourceTree = "<group>"; };
+		68787EC6281FFF9B00A634F3 /* ArticleImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleImageTableViewCell.swift; sourceTree = "<group>"; };
 		68C7D2222800493E001292AC /* IvanovIvanTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IvanovIvanTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68C7D2252800493E001292AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		68C7D2272800493E001292AC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -131,6 +137,9 @@
 				6861B21528180E7400F80E16 /* BannersListViewController.swift */,
 				6861B217281812B200F80E16 /* BannerListViewCell.swift */,
 				6861B219281964F400F80E16 /* BannerEditorViewController.swift */,
+				6861B21D281E734300F80E16 /* ArticleViewController.swift */,
+				6861B21F281E805100F80E16 /* ArticleViewCell.swift */,
+				68787EC6281FFF9B00A634F3 /* ArticleImageTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -206,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6861B220281E805100F80E16 /* ArticleViewCell.swift in Sources */,
 				68C7D2302800493E001292AC /* IvanovIvanTest.xcdatamodeld in Sources */,
 				68C7D22A2800493E001292AC /* MainViewController.swift in Sources */,
 				6861B21C281D050B00F80E16 /* DbExtentions.swift in Sources */,
@@ -215,6 +225,8 @@
 				686FE1C2280D8A08006B2739 /* DBsupport.swift in Sources */,
 				686FE1B0280A9EBF006B2739 /* ApiResponse.swift in Sources */,
 				686FE1B8280C276C006B2739 /* HttpMethod.swift in Sources */,
+				68787EC7281FFF9B00A634F3 /* ArticleImageTableViewCell.swift in Sources */,
+				6861B21E281E734300F80E16 /* ArticleViewController.swift in Sources */,
 				6861B218281812B200F80E16 /* BannerListViewCell.swift in Sources */,
 				686FE1B6280ADE20006B2739 /* WebAPI.swift in Sources */,
 				68C7D2262800493E001292AC /* AppDelegate.swift in Sources */,

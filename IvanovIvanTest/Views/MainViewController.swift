@@ -8,13 +8,14 @@
 import UIKit
 import CoreData
 
-class MainViewController: UIViewController, UITableViewDataSource, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, NSFetchedResultsControllerDelegate {
+class MainViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, NSFetchedResultsControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
         objectsTableView.dataSource = self
+        objectsTableView.delegate = self
         bannersCollectionView.dataSource = self
         bannersCollectionView.delegate = self
         
@@ -38,6 +39,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UICollectionV
                         DBSupport.updateBanners(banners: data.response.banners)
                         //self.getBannersData()
                         self.articles = data.response.articles
+                        DBSupport.updateArticles(articles: self.articles)
                     }
                 }
                 
@@ -121,6 +123,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UICollectionV
             //content.image = UIImage(systemName: "star")
             content.text = object.title
             content.secondaryText = object.text
+            content.secondaryTextProperties.alignment = .justified
 
             cell.contentConfiguration = content
         }
@@ -151,6 +154,12 @@ class MainViewController: UIViewController, UITableViewDataSource, UICollectionV
         }*/
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let object = articles?[ indexPath.row ] {
+            performSegue(withIdentifier: "showArticle", sender: object)
+        }
     }
     // MARK: - CollectionViewDataSource
     
@@ -223,6 +232,18 @@ class MainViewController: UIViewController, UITableViewDataSource, UICollectionV
     
     func controllerDidChangeContent(controller: NSFetchedResultsController<NSFetchRequestResult>) {
         //tableView.endUpdates()
+    }
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showArticle" {
+            let item = sender as! ArticleJSON
+            let nvc = segue.destination as! UINavigationController
+
+            let vc = nvc.topViewController as! ArticleViewController
+            vc.article = item
+        }
     }
 }
 
